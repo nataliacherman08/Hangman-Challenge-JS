@@ -22,19 +22,21 @@ let words = [
     'knight'
 ]
 
-//Variables
+//Variables-----------------------------------------------------------------------------------------------
 let answer = '';
-let maxAnswers = 10;
+let maxAnswers = 8;
 let mistakes = 0;
 let guessed = [];
 
-//Random Word
+
+//Random Word---------------------------------------------------------------------------------------------
 function randomWord() {
     answer = words[Math.floor(Math.random() * words.length)];
 }
 randomWord();
 
-//Keyboard
+
+//Keyboard-------------------------------------------------------------------------------------------------
 function alphabetButtons() {
     let letterButtons = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
         `
@@ -48,8 +50,16 @@ function alphabetButtons() {
 }
 alphabetButtons();
 
-//Count Mistakes
+
+//Count Mistakes-----------------------------------------------------------------------------------------
 document.getElementById('maxAnswers').innerHTML = maxAnswers;
+
+
+//The guessed word---------------------------------------------------------------------------------------
+function guessedWord() {
+
+}
+
 
 //Type writer effect for the h1
 let speed = 200;

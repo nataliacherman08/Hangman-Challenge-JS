@@ -24,11 +24,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   height: 100vh;
   text-align: center;
+}
+
+img {
+  height: 200px;
 }
 
 .btn {
