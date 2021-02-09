@@ -44,7 +44,7 @@ function alphabetButtons() {
             `+ letter + `
         </button>
         `
-    ).join('');
+    ).join('-');
 
     document.getElementById('keyboard').innerHTML = letterButtons;
 }
