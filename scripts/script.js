@@ -83,9 +83,32 @@ typeWriterEffect();
 //Change the color background (for fun)
 (() => {
 
-    document.getElementById('color').addEventListener('click', () => {
-        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
-        document.body.style.backgroundColor = '#' + randomColor;
-    });
+    //Pink bg
+    document.getElementById('purple').onclick = bgPurple;
+
+    function bgPurple() {
+        document.body.style.backgroundColor = '#e0cce2';
+    }
+
+    //Blue bg
+    document.getElementById('blue').onclick = bgBlue;
+
+    function bgBlue() {
+        document.body.style.backgroundColor = '#97e5e4';
+    }
+
+    //Yellow bg
+    document.getElementById('yellow').onclick = bgYellow;
+
+    function bgYellow() {
+        document.body.style.backgroundColor = '#fdffbf';
+    }
+
+    //Green bg
+    document.getElementById('green').onclick = bgGreen;
+
+    function bgGreen() {
+        document.body.style.backgroundColor = '#7ce29b';
+    }
 
 })();
