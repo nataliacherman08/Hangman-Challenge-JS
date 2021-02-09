@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Fragment Core';
+  font-size: normal;
+  font-weight: normal;
+  src: url("../assets/font/Fragmentcore.otf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  background-color: #fffdf7;
+  background-size: cover;
+  font-family: 'Fragment Core';
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.btn {
+  width: 70px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1.5em;
+}
+
+.typing {
+  margin-left: 10px;
+}
+
+.typing::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 5%;
+  border-right: 2px solid #000;
+  -webkit-animation: blink 0.7s infinite ease;
+          animation: blink 0.7s infinite ease;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */
