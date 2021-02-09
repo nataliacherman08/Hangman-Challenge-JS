@@ -42,7 +42,7 @@ function alphabetButtons() {
             `+ letter + `
         </button>
         `
-    );
+    ).join('');
 
     document.getElementById('keyboard').innerHTML = letterButtons;
 }
