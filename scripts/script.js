@@ -40,6 +40,14 @@ randomWord();
 document.getElementById('maxAnswers').innerHTML = maxAnswers;
 
 
+//Indication of number of letters------------------------------------------------------------------------
+function unknownWord() {
+    if (answer === answer.length) {
+        unknown = '_';
+        document.getElementById('word').innerHTML = unknown;
+    }
+}
+
 
 //Keyboard-------------------------------------------------------------------------------------------------
 function alphabetButtons() {
