@@ -27,6 +27,7 @@ let answer = '';
 let maxAnswers = 7;
 let mistakes = 0;
 let guessed = [];
+let unknown = null;
 
 
 //Random Word---------------------------------------------------------------------------------------------
@@ -34,6 +35,10 @@ function randomWord() {
     answer = words[Math.floor(Math.random() * words.length)];
 }
 randomWord();
+
+//Count Mistakes-----------------------------------------------------------------------------------------
+document.getElementById('maxAnswers').innerHTML = maxAnswers;
+
 
 
 //Keyboard-------------------------------------------------------------------------------------------------
@@ -49,17 +54,6 @@ function alphabetButtons() {
     document.getElementById('keyboard').innerHTML = letterButtons;
 }
 alphabetButtons();
-
-
-//Count Mistakes-----------------------------------------------------------------------------------------
-document.getElementById('maxAnswers').innerHTML = maxAnswers;
-
-
-//The guessed word---------------------------------------------------------------------------------------
-function guessedWord() {
-
-}
-
 
 
 
@@ -80,7 +74,7 @@ function typeWriterEffect() {
 typeWriterEffect();
 
 
-//Change the color background (for fun)
+//Change the color background (for fun)--------------------------------------------------------------
 (() => {
 
     //Pink bg
@@ -112,3 +106,13 @@ typeWriterEffect();
     }
 
 })();
+
+//Canvas----------------------------------
+let canvas = document.getElementById('canvas');
+let ctx = canvas.getContext('2d');
+
+canvas.width = 180;
+canvas.height = 250;
+
+ctx.strokeStyle = '#000';
+ctx.lineWidth = 2;

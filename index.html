@@ -12,26 +12,31 @@
 </head>
 
 <body>
-    <div class='container'>
+    <main class='container'>
         <h1 id='typeWriter' class='typing'></h1>
         <div>Wrong guesses: <span id='mistakes'>0</span> of <span id='maxAnswers'></span></div>
 
-        <img id='hangman' src='assets/hangman.png' alt='hangman game' />
+        <!--Canvas element-->
+        <canvas id='canvas'></canvas>
+
 
         <p>Guess the word :</p>
         <p id='word'></p>
         <div id='keyboard'></div>
-        <button class='btn' onClick='reset()''>Reset</button>
+        <button class='btn' onClick='reset()'>Play Again</button>
 
+
+
+        <!--Bg color-->
         <p>Change the background color</p>
-
         <section class=' container-btns'>
-            <button type=' button' id='purple'>Pink</button>
+            <button type=' button' id='purple'>Purple</button>
             <button type=' button' id='blue'>Blue</button>
             <button type=' button' id='yellow'>Yellow</button>
             <button type=' button' id='green'>Green</button>
-            </section>
-    </div>
+        </section>
+
+    </main>
 
     <script src=' scripts/script.js'></script>
 </body>
