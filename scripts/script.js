@@ -23,30 +23,21 @@ let words = [
 ]
 
 //Variables-----------------------------------------------------------------------------------------------
-let answer = '';
+let secretWord = '';
 let maxAnswers = 7;
 let mistakes = 0;
 let guessed = [];
-let unknown = null;
 
 
 //Random Word---------------------------------------------------------------------------------------------
 function randomWord() {
-    answer = words[Math.floor(Math.random() * words.length)];
+    secretWord = words[Math.floor(Math.random() * words.length)];
 }
 randomWord();
 
 //Count Mistakes-----------------------------------------------------------------------------------------
 document.getElementById('maxAnswers').innerHTML = maxAnswers;
 
-
-//Indication of number of letters------------------------------------------------------------------------
-function unknownWord() {
-    if (answer === answer.length) {
-        unknown = '_';
-        document.getElementById('word').innerHTML = unknown;
-    }
-}
 
 
 //Keyboard-------------------------------------------------------------------------------------------------
