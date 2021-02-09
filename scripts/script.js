@@ -78,3 +78,14 @@ function typeWriterEffect() {
     }
 }
 typeWriterEffect();
+
+
+//Change the color background (for fun)
+(() => {
+
+    document.getElementById('color').addEventListener('click', () => {
+        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        document.body.style.backgroundColor = '#' + randomColor;
+    });
+
+})();
