@@ -40,7 +40,7 @@ randomWord();
 function alphabetButtons() {
     let letterButtons = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
         `
-        <button class = 'btn' id = '`+ letter + `' onClick = 'handleGuess('` + letter + `')'>
+        <button class = 'btn' id = '`+ letter + `' onClick = '('` + letter + `')'>
             `+ letter + `
         </button>
         `
