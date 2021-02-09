@@ -48,7 +48,8 @@ function alphabetButtons() {
 }
 alphabetButtons();
 
-
+//Count Mistakes
+document.getElementById('maxAnswers').innerHTML = maxAnswers;
 
 //Type writer effect for the h1
 let speed = 200;
