@@ -42,6 +42,27 @@ img {
   font-size: 1.5em;
 }
 
+.letter-btn {
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  font-size: 1.4em;
+  text-transform: capitalize;
+}
+
+#keyboard {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .typing {
   margin-left: 10px;
 }

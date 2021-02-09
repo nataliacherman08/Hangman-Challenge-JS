@@ -40,11 +40,11 @@ randomWord();
 function alphabetButtons() {
     let letterButtons = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
         `
-        <button class = 'btn' id = '`+ letter + `' onClick = '('` + letter + `')'>
+        <button class = 'letter-btn' id = '`+ letter + `' onClick = '('` + letter + `')'>
             `+ letter + `
         </button>
         `
-    ).join('-');
+    ).join('');
 
     document.getElementById('keyboard').innerHTML = letterButtons;
 }
