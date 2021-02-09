@@ -61,7 +61,9 @@ function guessedWord() {
 }
 
 
-//Type writer effect for the h1
+
+
+//Type writer effect for the h1-------------------------------------------------------------------------
 let speed = 200;
 let i = 0;
 
