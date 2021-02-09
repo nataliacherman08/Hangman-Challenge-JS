@@ -54,6 +54,10 @@ img
     border: none;
     font-size: 1.4em;
     text-transform: capitalize;
+    &:hover {
+        border: 1px solid #3f3f4e;
+        border-radius: 10px;
+    }
 }
 
 #keyboard

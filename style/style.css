@@ -51,6 +51,11 @@ img {
   text-transform: capitalize;
 }
 
+.letter-btn:hover {
+  border: 1px solid #3f3f4e;
+  border-radius: 10px;
+}
+
 #keyboard {
   width: 40%;
   display: -webkit-box;

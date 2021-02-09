@@ -24,7 +24,7 @@ let words = [
 
 //Variables-----------------------------------------------------------------------------------------------
 let answer = '';
-let maxAnswers = 8;
+let maxAnswers = 7;
 let mistakes = 0;
 let guessed = [];
 
