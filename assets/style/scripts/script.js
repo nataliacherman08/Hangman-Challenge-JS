@@ -45,14 +45,6 @@ let hangman = {
         hangman.letters = hangman.word.length;
         console.log(hangman.word);//To show the answer in the console
 
-        //Blanks '_'
-        hangman.secretWord.innerHTML = '';
-        for (i = 0; i < hangman.word.length; i++) {
-            let char = document.createElement('span');
-            char.innerHTML = "_";
-            char.id = "wordBlank-" + i;
-            hangman.secretWord.appendChild(char);
-        }
 
         //Keyboard
         for (i = 65; i < 91; i++) {
@@ -85,6 +77,16 @@ let hangman = {
         hangman.chances.innerHTML = hangman.guesses;
         hangman.image.style.opacity = 0;
 
+        //Blanks '_'
+        hangman.secretWord.innerHTML = '';
+        for (i = 0; i < hangman.word.length; i++) {
+            let char = document.createElement("span");
+            char.innerHTML = "_";
+            char.id = "hangword-" + i;
+            hangman.secretWord.appendChild(char);
+        }
+
+
 
         //Enable characters
         hangman.toggle(false);
@@ -105,7 +107,7 @@ let hangman = {
         if (hits.length > 0) {
             // Reveal words
             for (hit of hits) {
-                document.getElementById('wordBlank-' + hit).innerHTML = this.value;
+                document.getElementById('hangword-' + hit).innerHTML = this.value;
             }
 
             hangman.rights += hits.length;
