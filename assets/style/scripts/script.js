@@ -105,7 +105,7 @@ let hangman = {
         if (hits.length > 0) {
             // Reveal words
             for (hit of hits) {
-                document.getElementById("hangword-" + hit).innerHTML = this.value;
+                document.getElementById('hangword-' + hit).innerHTML = this.value;
             }
 
             hangman.rights += hits.length;
@@ -124,7 +124,7 @@ let hangman = {
 
             if (hangman.wrongs == hangman.guesses) {
                 hangman.toggle(true);
-                alert('So sorry, maybe the next time !');
+                alert(`So sorry, maybe the next time ! The guessed word was : ${hangman.word}`);
             }
         }
 
