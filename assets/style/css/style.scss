@@ -1,0 +1,106 @@
+@font-face
+{
+    font: {
+        family : 'Fragment Core';
+        size: normal;
+        weight: normal;
+    }
+    src: url('../../font/Fragmentcore.otf');
+}
+
+body
+{
+    padding : 0;
+    margin : 0;
+    background: {
+        color : #fffdf7;
+        size : cover;
+    }
+    font-family: 'Fragment Core';
+    color: #000;
+}
+
+
+#container
+{
+  display: flex;
+  flex-direction: column;
+  max-width: 640px;
+  margin: auto;
+}
+
+/*IMAGE*/
+#image
+{
+  max-width: 40%;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+/*SECRET WORD*/
+#secret-word
+{
+  margin-bottom: 10px;
+}
+#secret-word span 
+{
+  display: inline-block;
+  margin: 5px;
+  font-size: 2em;
+}
+
+/*KEYBOARD*/
+#keyboard 
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#keyboard input[type=button] 
+{
+    margin: 4px;
+}
+
+#keyboard input[type=button]:disabled
+{
+    background: #7b7b7b;
+    color: #c3c3c3;
+}
+  
+#keyboard input[type=button], #start-again 
+{
+    font-size: 1.3em;
+    padding: 5px;
+}
+
+//Typing Effect on the h1-------------------------------------------------------
+.typing
+{
+    margin-left: 10px;
+}
+
+.typing::after
+{
+    content : '';
+    position: absolute;
+    width: 1px;
+    height: 5%;
+    border-right: 2px solid #000;
+    animation: blink 0.7s infinite ease;
+}
+
+@keyframes blink{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+//Canvas-------------------------
+canvas 
+{
+    border: 1px solid #000;
+}

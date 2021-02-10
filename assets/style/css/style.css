@@ -2,7 +2,7 @@
   font-family: 'Fragment Core';
   font-size: normal;
   font-weight: normal;
-  src: url("../assets/font/Fragmentcore.otf");
+  src: url("../../font/Fragmentcore.otf");
 }
 
 body {
@@ -14,7 +14,7 @@ body {
   color: #000;
 }
 
-.container {
+#container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,31 +22,31 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  height: 150vh;
-  text-align: center;
+  max-width: 640px;
+  margin: auto;
 }
 
-img {
-  height: 200px;
+/*IMAGE*/
+#image {
+  max-width: 40%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
 }
 
-button {
-  font-family: 'Fragment Core';
+/*SECRET WORD*/
+#secret-word {
+  margin-bottom: 10px;
 }
 
-.btn {
-  cursor: pointer;
-  border: none;
-  font-size: 1.2em;
-  background-color: transparent;
+#secret-word span {
+  display: inline-block;
+  margin: 5px;
+  font-size: 2em;
 }
 
-.container-btns {
+/*KEYBOARD*/
+#keyboard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,33 +54,22 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-.letter-btn {
-  width: 50px;
-  height: 40px;
-  cursor: pointer;
-  border: none;
-  font-size: 1.4em;
-  text-transform: capitalize;
-  background-color: transparent;
-}
-
-.letter-btn:hover {
-  border: 1px solid #000;
-  border-radius: 10px;
-}
-
-#keyboard {
-  width: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+#keyboard input[type=button] {
+  margin: 4px;
+}
+
+#keyboard input[type=button]:disabled {
+  background: #7b7b7b;
+  color: #c3c3c3;
+}
+
+#keyboard input[type=button], #start-again {
+  font-size: 1.3em;
+  padding: 5px;
 }
 
 .typing {
@@ -117,6 +106,5 @@ button {
 
 canvas {
   border: 1px solid #000;
-  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
