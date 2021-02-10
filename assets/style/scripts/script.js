@@ -21,7 +21,7 @@ let words = [
     'castle',
     'knight'];
 
-//Hangman as an Object
+//Hangman as an Object-------------------------------------------------
 let hangman = {
     guesses: 7,
     word: null,
@@ -33,6 +33,7 @@ let hangman = {
     keyboard: null,
     chances: null,
 
+    //1)
     init: function () {
         hangman.image = document.getElementById('image');
         hangman.secretWord = document.getElementById("secret-word");
@@ -64,13 +65,18 @@ let hangman = {
     },
 
 
-    //Disable and enable
+
+
+
+    //2) Disable and enable
     toggle: function (disable) {
         let all = hangman.keyboard.getElementsByTagName('input');
         for (i of all) { i.disabled = disable; }
     },
 
-    //Reset
+
+
+    //3) Reset
     reset: function () {
         hangman.rights = 0;
         hangman.wrongs = 0;
@@ -81,18 +87,19 @@ let hangman = {
         hangman.secretWord.innerHTML = '';
         for (i = 0; i < hangman.word.length; i++) {
             let char = document.createElement("span");
-            char.innerHTML = "_";
-            char.id = "hangword-" + i;
+            char.innerHTML = '_';
+            char.id = "blank-" + i;
             hangman.secretWord.appendChild(char);
         }
-
-
 
         //Enable characters
         hangman.toggle(false);
     },
 
-    //Check
+
+
+
+    //4) Check
     check: function () {
         var index = 0, hits = [];
         while (index >= 0) {
@@ -107,7 +114,7 @@ let hangman = {
         if (hits.length > 0) {
             // Reveal words
             for (hit of hits) {
-                document.getElementById('hangword-' + hit).innerHTML = this.value;
+                document.getElementById('blank-' + hit).innerHTML = this.value;
             }
 
             hangman.rights += hits.length;
@@ -134,6 +141,8 @@ let hangman = {
         this.disabled = true;
     }
 };
+
+//-------------------------------------------------------------------------------------------------------------------
 
 window.addEventListener("DOMContentLoaded", hangman.init);
 
