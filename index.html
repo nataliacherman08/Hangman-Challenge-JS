@@ -7,25 +7,25 @@
     <meta name='description' content='Hangman game'>
     <meta name='keywords' content='Hangman, game'>
     <meta name='author' content='Nat Cherman'>
-    <link rel='stylesheet' href='style/style.css' />
-    <title>Hangman Game</title>
+    <title>Hangman Game JS</title>
+    <link rel='stylesheet' href='assets/style/css/style.css'>
+    <script src="hangman.js"></script>
 </head>
 
 <body>
-    <main class='container'>
-        <h1 id='typeWriter' class='typing'></h1>
-        <div>Wrong guesses: <span id='mistakes'>0</span> of <span id='maxAnswers'></span></div>
-
-        <!--Canvas element-->
-        <canvas id='canvas'></canvas>
-
-
-        <p>Guess the word :</p>
-        <p id='word'></p>
+    <main id='container'>
+        <!--Canvas element: <canvas id='canvas'></canvas>-->
+        <!--Image-->
+        <img id="image" src="assets/hangman7.png" />
+        <!--Keyboard and secret word-->
+        <div id='secret-word'></div>
         <div id='keyboard'></div>
-        <button class='btn' onClick='reset()'>Play Again</button>
 
-
+        <!-- (B3) RESET & LIVES -->
+        <input type="button" value="Reset" id='start-again' disabled />
+        <p>
+            Lives Left: <span id="hangman-lives"></span>
+        </p>
 
         <!--Bg color-->
         <p>Change the background color</p>
@@ -35,10 +35,7 @@
             <button type=' button' id='yellow'>Yellow</button>
             <button type=' button' id='green'>Green</button>
         </section>
-
     </main>
-
-    <script src=' scripts/script.js'></script>
 </body>
 
 </html>
