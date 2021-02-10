@@ -21,6 +21,9 @@ let words = [
     'castle',
     'knight'];
 
+//Images
+let image = document.getElementById('image');
+
 let gallery = [
     '../../hangman.png',
     '../../hangman1.png',
@@ -32,9 +35,12 @@ let gallery = [
     '../../hangman7.png'
 ];
 
+let indexGallery = 1;
+
+
 function change() {
-    let pic = document.getElementById('image');
-    pic.src = gallery[''];
+    image.setAttribute('src', gallery[indexGallery]);
+    indexGallery++;
 }
 
 //Hangman as an Object-------------------------------------------------
@@ -44,14 +50,13 @@ let hangman = {
     letters: 0,
     rights: 0,
     wrongs: 0,
-    image: null,
     secretWord: null,
     keyboard: null,
     chances: null,
 
     //1)
     init: function () {
-        hangman.image = document.getElementById('image');
+        /*hangman.image = document.getElementById('image');*/
         hangman.secretWord = document.getElementById("secret-word");
         hangman.keyboard = document.getElementById('keyboard');
         hangman.chances = document.getElementById('guess');
