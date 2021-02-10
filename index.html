@@ -14,10 +14,10 @@
 
 <body>
     <main id='container'>
-        <h1 id='typeWriter'></h1>
         <!--Canvas element: <canvas id='canvas'></canvas>-->
         <!--Image-->
         <img id="image" src="assets/hangman7.png" />
+        <h1 id='typeWriter' class='typing'></h1>
         <!--Keyboard and secret word-->
         <div id='secret-word'></div>
         <div id='keyboard'></div>
@@ -25,7 +25,7 @@
         <!-- (B3) RESET & LIVES -->
         <input type="button" value="Reset" id='start-again' disabled />
         <p>
-            Lives Left: <span id="hangman-lives"></span>
+            Lives Left: <span id="guess"></span>
         </p>
 
         <!--Bg color-->
