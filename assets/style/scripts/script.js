@@ -40,37 +40,6 @@ let hangman = {
         hangman.keyboard = document.getElementById('keyboard');
         hangman.chances = document.getElementById('guess');
 
-        //Keyboard
-        for (i = 65; i < 91; i++) {
-            let characters = document.createElement('input');
-            characters.type = 'button';
-            characters.value = String.fromCharCode(i);
-            characters.disabled = true;
-            characters.addEventListener('click', hangman.check);
-            hangman.keyboard.appendChild(characters);
-        }
-
-        //Infinite reset
-        let startAgain = document.getElementById('start-again');
-        startAgain.addEventListener('click', hangman.reset);
-        startAgain.disabled = false;
-        hangman.reset();
-    },
-
-
-    //Disable and enable
-    toggle: function (disable) {
-        let all = hangman.keyboard.getElementsByTagName("input");
-        for (i of all) { i.disabled = disable; }
-    },
-
-    //Reset
-    reset: function () {
-        hangman.rights = 0;
-        hangman.wrongs = 0;
-        hangman.chances.innerHTML = hangman.guesses;
-        hangman.image.style.opacity = 0;
-
         //Choose secret Word
         hangman.word = words[Math.floor(Math.random() * Math.floor(words.length))];
         hangman.word = hangman.word.toUpperCase();
@@ -86,8 +55,40 @@ let hangman = {
             hangman.secretWord.appendChild(charnow);
         }
 
+        //Keyboard
+        for (i = 65; i < 91; i++) {
+            let characters = document.createElement('input');
+            characters.type = 'button';
+            characters.value = String.fromCharCode(i);
+            characters.disabled = true;
+            characters.addEventListener('click', hangman.check);
+            hangman.keyboard.appendChild(characters);
+        }
+
         //Enable characters
         hangman.toggle(false);
+
+        //Infinite reset
+        let startAgain = document.getElementById('start-again');
+        startAgain.addEventListener('click', hangman.reset);
+        startAgain.disabled = false;
+        hangman.reset();
+    },
+
+
+    //Disable and enable
+    toggle: function (disable) {
+        let all = hangman.keyboard.getElementsByTagName('input');
+        for (i of all) { i.disabled = disable; }
+    },
+
+    //Reset
+    reset: function () {
+        hangman.rights = 0;
+        hangman.wrongs = 0;
+        hangman.chances.innerHTML = hangman.guesses;
+        hangman.image.style.opacity = 0;
+
     },
 
     //Check
@@ -153,40 +154,6 @@ function typeWriterEffect() {
 }
 typeWriterEffect();
 
-
-
-//Change the color background (for fun)--------------------------------------------------------------
-(() => {
-
-    //Pink bg
-    document.getElementById('purple').onclick = bgPurple;
-
-    function bgPurple() {
-        document.body.style.backgroundColor = '#e0cce2';
-    }
-
-    //Blue bg
-    document.getElementById('blue').onclick = bgBlue;
-
-    function bgBlue() {
-        document.body.style.backgroundColor = '#97e5e4';
-    }
-
-    //Yellow bg
-    document.getElementById('yellow').onclick = bgYellow;
-
-    function bgYellow() {
-        document.body.style.backgroundColor = '#fdffbf';
-    }
-
-    //Green bg
-    document.getElementById('green').onclick = bgGreen;
-
-    function bgGreen() {
-        document.body.style.backgroundColor = '#7ce29b';
-    }
-
-})();
 
 //Canvas----------------------------------
 /*let canvas = document.getElementById('canvas');
