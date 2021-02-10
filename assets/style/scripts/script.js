@@ -33,7 +33,6 @@ let hangman = {
     keyboard: null,
     chances: null,
 
-    //Init
     init: function () {
         hangman.image = document.getElementById('image');
         hangman.secretWord = document.getElementById("secret-word");
@@ -41,7 +40,7 @@ let hangman = {
         hangman.chances = document.getElementById('guess');
 
         //Choose secret Word
-        hangman.word = words[Math.floor(Math.random() * Math.floor(words.length))];
+        hangman.word = words[Math.floor(Math.random() * words.length)];
         hangman.word = hangman.word.toUpperCase();
         hangman.letters = hangman.word.length;
         console.log(hangman.word);//To show the answer in the console
@@ -65,9 +64,6 @@ let hangman = {
             hangman.keyboard.appendChild(characters);
         }
 
-        //Enable characters
-        hangman.toggle(false);
-
         //Infinite reset
         let startAgain = document.getElementById('start-again');
         startAgain.addEventListener('click', hangman.reset);
@@ -89,6 +85,9 @@ let hangman = {
         hangman.chances.innerHTML = hangman.guesses;
         hangman.image.style.opacity = 0;
 
+
+        //Enable characters
+        hangman.toggle(false);
     },
 
     //Check
@@ -125,7 +124,7 @@ let hangman = {
 
             if (hangman.wrongs == hangman.guesses) {
                 hangman.toggle(true);
-                alert("YOU LOSE!");
+                alert('So sorry, maybe the next time !');
             }
         }
 
@@ -137,22 +136,6 @@ let hangman = {
 window.addEventListener("DOMContentLoaded", hangman.init);
 
 
-
-//Type writer effect for the h1-------------------------------------------------------------------------
-let speed = 200;
-let i = 0;
-
-let h = document.getElementById('typeWriter');
-let text = 'Hangman Game';
-
-function typeWriterEffect() {
-    if (i < text.length) {
-        h.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typeWriterEffect, speed);
-    }
-}
-typeWriterEffect();
 
 
 //Canvas----------------------------------

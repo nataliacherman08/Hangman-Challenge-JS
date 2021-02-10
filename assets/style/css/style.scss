@@ -73,28 +73,3 @@ body
     font-size: 1.3em;
     padding: 5px;
 }
-
-//Typing Effect on the h1-------------------------------------------------------
-.typing
-{
-    margin-left: 10px;
-}
-
-.typing::after
-{
-    content : '';
-    position: absolute;
-    width: 1px;
-    height: 5%;
-    border-right: 2px solid #000;
-    animation: blink 0.7s infinite ease;
-}
-
-@keyframes blink{
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
