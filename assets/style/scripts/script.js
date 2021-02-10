@@ -21,6 +21,22 @@ let words = [
     'castle',
     'knight'];
 
+let gallery = [
+    '../../hangman.png',
+    '../../hangman1.png',
+    '../../hangman2.png',
+    '../../hangman3.png',
+    '../../hangman4.png',
+    '../../hangman5.png',
+    '../../hangman6.png',
+    '../../hangman7.png'
+];
+
+function change() {
+    let pic = document.getElementById('image');
+    pic.src = gallery[''];
+}
+
 //Hangman as an Object-------------------------------------------------
 let hangman = {
     guesses: 7,
@@ -40,13 +56,6 @@ let hangman = {
         hangman.keyboard = document.getElementById('keyboard');
         hangman.chances = document.getElementById('guess');
 
-        //Choose secret Word
-        hangman.word = words[Math.floor(Math.random() * words.length)];
-        hangman.word = hangman.word.toUpperCase();
-        hangman.letters = hangman.word.length;
-        console.log(hangman.word);//To show the answer in the console
-
-
         //Keyboard
         for (i = 65; i < 91; i++) {
             let characters = document.createElement('input');
@@ -55,6 +64,7 @@ let hangman = {
             characters.disabled = true;
             characters.addEventListener('click', hangman.check);
             hangman.keyboard.appendChild(characters);
+
         }
 
         //Infinite reset
@@ -64,24 +74,25 @@ let hangman = {
         hangman.reset();
     },
 
-
-
-
-
     //2) Disable and enable
     toggle: function (disable) {
         let all = hangman.keyboard.getElementsByTagName('input');
         for (i of all) { i.disabled = disable; }
     },
 
-
-
     //3) Reset
     reset: function () {
         hangman.rights = 0;
         hangman.wrongs = 0;
         hangman.chances.innerHTML = hangman.guesses;
-        hangman.image.style.opacity = 0;
+
+        //Choose secret Word
+        hangman.word = words[Math.floor(Math.random() * Math.floor(words.length))];
+        hangman.word = hangman.word.toUpperCase();
+        hangman.letters = hangman.word.length;
+
+        console.log(hangman.word);//To show the answer in the console
+
 
         //Blanks '_' It's important to put that after reset
         hangman.secretWord.innerHTML = '';
@@ -129,7 +140,7 @@ let hangman = {
             hangman.wrongs++;
             var livesleft = hangman.guesses - hangman.wrongs;
             hangman.chances.innerHTML = livesleft;
-            hangman.image.style.opacity = (1 - (livesleft / hangman.guesses)).toFixed(2);
+            change();
 
             if (hangman.wrongs == hangman.guesses) {
                 hangman.toggle(true);

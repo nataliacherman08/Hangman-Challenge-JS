@@ -30,9 +30,6 @@ body {
 /*IMAGE*/
 #image {
   max-width: 40%;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  opacity: 0;
 }
 
 /*SECRET WORD*/

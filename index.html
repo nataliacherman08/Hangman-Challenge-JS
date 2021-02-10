@@ -9,14 +9,14 @@
     <meta name='author' content='Nat Cherman'>
     <title>Hangman Game JS</title>
     <link rel='stylesheet' href='assets/style/css/style.css'>
-    <script src='assets/style/scripts/script.js'></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <main id='container'>
         <!--Canvas element: <canvas id='canvas'></canvas>-->
         <!--Image-->
-        <img id="image" src="assets/hangman7.png" />
+        <img id="image" src="assets/hangman.png" onclick="change() ;" />
         <h1 id='typeWriter' class='typing'></h1>
         <!--Keyboard and secret word-->
         <div id='secret-word'></div>
@@ -28,6 +28,8 @@
             Lives Left: <span id="guess"></span>
         </p>
     </main>
+
+    <script src='assets/style/scripts/script.js'></script>
 </body>
 
 </html>
