@@ -111,7 +111,7 @@ let hangman = {
             hangman.rights += hits.length;
             if (hangman.rights == hangman.letters) {
                 hangman.toggle(true);
-                alert("YOU WIN!");
+                alert('Congratulations !');
             }
         }
 
