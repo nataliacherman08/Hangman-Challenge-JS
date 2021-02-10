@@ -50,7 +50,7 @@ let hangman = {
         for (i = 0; i < hangman.word.length; i++) {
             let char = document.createElement('span');
             char.innerHTML = "_";
-            char.id = "hangword-" + i;
+            char.id = "wordBlank-" + i;
             hangman.secretWord.appendChild(char);
         }
 
@@ -105,7 +105,7 @@ let hangman = {
         if (hits.length > 0) {
             // Reveal words
             for (hit of hits) {
-                document.getElementById('hangword-' + hit).innerHTML = this.value;
+                document.getElementById('wordBlank-' + hit).innerHTML = this.value;
             }
 
             hangman.rights += hits.length;
