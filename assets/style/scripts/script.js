@@ -45,13 +45,13 @@ let hangman = {
         hangman.letters = hangman.word.length;
         console.log(hangman.word);//To show the answer in the console
 
-        //Blanks
-        hangman.secretWord.innerHTML = "";
+        //Blanks '_'
+        hangman.secretWord.innerHTML = '';
         for (i = 0; i < hangman.word.length; i++) {
-            var charnow = document.createElement("span");
-            charnow.innerHTML = "_";
-            charnow.id = "hangword-" + i;
-            hangman.secretWord.appendChild(charnow);
+            let char = document.createElement('span');
+            char.innerHTML = "_";
+            char.id = "hangword-" + i;
+            hangman.secretWord.appendChild(char);
         }
 
         //Keyboard
