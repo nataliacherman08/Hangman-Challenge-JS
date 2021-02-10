@@ -101,23 +101,23 @@ let hangman = {
 
     //4) Check
     check: function () {
-        var index = 0, hits = [];
+        let index = 0, tries = [];
         while (index >= 0) {
             index = hangman.word.indexOf(this.value, index);
             if (index == -1) { break; }
             else {
-                hits.push(index);
+                tries.push(index);
                 index++;
             }
         }
 
-        if (hits.length > 0) {
+        if (tries.length > 0) {
             // Reveal words
-            for (hit of hits) {
+            for (hit of tries) {
                 document.getElementById('blank-' + hit).innerHTML = this.value;
             }
 
-            hangman.rights += hits.length;
+            hangman.rights += tries.length;
             if (hangman.rights == hangman.letters) {
                 hangman.toggle(true);
                 alert('Congratulations !');
