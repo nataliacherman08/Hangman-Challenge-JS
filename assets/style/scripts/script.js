@@ -79,19 +79,19 @@ let hangman = {
         hangman.reset();
     },
 
-    //2) Disable and enable
+    //2) Disable characters
     toggle: function (disable) {
         let all = hangman.keyboard.getElementsByTagName('input');
         for (i of all) { i.disabled = disable; }
     },
 
-    //3) Reset
+    //3) Reset "Everytime we push the reset button,"
     reset: function () {
         hangman.rights = 0;
         hangman.wrongs = 0;
         hangman.chances.innerHTML = hangman.guesses;
 
-        //Choose secret Word
+        //Choose a new secret Word
         hangman.word = words[Math.floor(Math.random() * Math.floor(words.length))];
         hangman.word = hangman.word.toUpperCase();
         hangman.letters = hangman.word.length;
@@ -99,7 +99,7 @@ let hangman = {
         console.log(hangman.word);//To show the answer in the console
 
 
-        //Blanks '_' It's important to put that after reset
+        //Blanks '_'
         hangman.secretWord.innerHTML = '';
         for (i = 0; i < hangman.word.length; i++) {
             let char = document.createElement("span");
