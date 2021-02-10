@@ -77,7 +77,7 @@ let hangman = {
         hangman.chances.innerHTML = hangman.guesses;
         hangman.image.style.opacity = 0;
 
-        //Blanks '_'
+        //Blanks '_' It's important to put that after reset
         hangman.secretWord.innerHTML = '';
         for (i = 0; i < hangman.word.length; i++) {
             let char = document.createElement("span");
