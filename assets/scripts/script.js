@@ -109,7 +109,7 @@ function checkIfGameWon() {
 //Function to check if the user lose
 function checkIfGameLost() {
     if (mistakes === maxWrong) {
-        document.getElementById('blanks').innerHTML = 'The secret word as : ' + answer;
+        document.getElementById('blanks').innerHTML = 'The secret word was : ' + answer;
         document.getElementById('keyboard').innerHTML = 'Sorry, maybe the next time.';
     }
 }
