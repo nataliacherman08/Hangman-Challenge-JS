@@ -27,6 +27,9 @@ body
 .container
 {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -77,4 +80,5 @@ img
         color: $orange;
     }
     margin-top: 20px;
+    margin-left: 1100px;
 }
