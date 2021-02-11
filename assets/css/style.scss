@@ -30,8 +30,8 @@ body
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background: rgba(224, 168, 108, 0.5);
-    color: #fff;
+    color: $fairOrange;
+    margin-top: 100px;
 }
 
 
@@ -50,7 +50,7 @@ img
 
 .alphabet
 {
-    color : #fff;
+    color : $fairOrange;
     font: {
         size: 1.5em;
         family: 'Fragment Core';

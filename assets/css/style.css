@@ -28,8 +28,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: rgba(224, 168, 108, 0.5);
-  color: #fff;
+  color: #ddc3a5;
+  margin-top: 100px;
 }
 
 img {
@@ -44,7 +44,7 @@ img {
 }
 
 .alphabet {
-  color: #fff;
+  color: #ddc3a5;
   font-size: 1.5em;
   font-family: 'Fragment Core';
   background: transparent;
