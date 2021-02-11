@@ -69,16 +69,21 @@ function generateButtons() {
     document.getElementById('keyboard').innerHTML = buttonsHTML;//To insert this keyboard in HTML
 }
 
+
+//5) Function for changing picture everytime the user makes a mistake
+function updatePicture() {
+    document.getElementById('hangedMan').src = 'images/' + mistakes + '.png';
+}
+
 // ====The function of the Game========
 function handleGuess(chosenLetter) {
     guessed.indexOf(chosenLetter) === -1 ? guessed.push(chosenLetter) : null;
-    document.getElementById(chosenLetter).setAttribute('disabled', true);
 
-    if (answer.indexOf(chosenLetter) >= 0) {
+    if (answer.indexOf(chosenLetter) >= 0) { //if the letter exists in the word
         guessedWord();
         checkIfGameWon();
-    } else if (answer.indexOf(chosenLetter) === -1) {
-        mistakes++;
+    } else if (answer.indexOf(chosenLetter) === -1) { //if the letter doesn't exist in the word
+        mistakes++; //count mistakes, add 1
         updateMistakes();
         checkIfGameLost();
         updatePicture();
@@ -86,15 +91,10 @@ function handleGuess(chosenLetter) {
 }
 
 
-//1) Function that add 1 to mistake
 function updateMistakes() {
     document.getElementById('mistakes').innerHTML = mistakes;
 }
 
-
-function updatePicture() {
-    document.getElementById('hangedMan').src = 'images' + mistakes + 'hanged.png';
-}
 
 
 //Function to check if the user won
@@ -112,6 +112,8 @@ function checkIfGameLost() {
     }
 }
 
+
+//Function to replace the letters of the word bu '_'
 function guessedWord() {
     wordStatus = answer.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('');
     document.getElementById('blanks').innerHTML = wordStatus;
@@ -127,7 +129,7 @@ function reset() {
     guessedWord();
     updateMistakes();
     generateButtons();
-    document.getElementById('hangedMan').src = 'images/hanged6.png';
+    document.getElementById('hangedMan').src = "images/hanged6.png";
 }
 
 

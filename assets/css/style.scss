@@ -25,13 +25,7 @@ body
 }
 
 //All the box
-.container
-{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
+
 
 img
 {
@@ -50,14 +44,14 @@ img
 {
     color : $fairOrange;
     font: {
-        size: 2em;
+        size: 1.5em;
         family: 'Fragment Core';
     }
     background: transparent;
     border: none;
     cursor: pointer;
     width: 30px;
-    padding:5px 50px;
+    margin: 5px 50px;
     &:hover {
         color: $orange;
     }
