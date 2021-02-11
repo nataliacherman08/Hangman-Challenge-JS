@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,27 +9,63 @@
     <meta name='author' content='Nat Cherman'>
     <title>Hangman Game JS</title>
     <link rel='stylesheet' href='assets/style/css/style.css'>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
+
+    <header>
+        <h1>Hangman Game</h1>
+    </header>
     <main id='container'>
-        <!--Canvas element: <canvas id='canvas'></canvas>-->
-        <!--Image-->
-        <img id="image" src="assets/hangman.png" onclick="change()" />
-        <h1 id='typeWriter' class='typing'></h1>
-        <!--Keyboard and secret word-->
-        <div id='secret-word'></div>
-        <div id='keyboard'></div>
+        <img id='image' src='assets/hangman.png' alt='hangman' />
 
+        <p>Wrong guesses : <span id='mistakes'>0</span> of <span id='maxWrong'></span></p>
+        <p>Guess the word :</p>
+        <p id='secretWord'>Secret word</p>
 
-        <input type="button" value="Reset" id='start-again' disabled />
-        <p>
-            Lives Left: <span id="guess"></span>
-        </p>
+        <section id='keyboard'></section>
+        <button id='btn' onClick='reset()'>Start Again</button>
     </main>
-
     <script src='assets/style/scripts/script.js'></script>
+</body>
+
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='Hangman game'>
+    <meta name='keywords' content='Hangman, game'>
+    <meta name='author' content='Nat Cherman'>
+    <title>Hangman Game JS</title>
+    <link rel='stylesheet' href='assets/css/style.css'>
+</head>
+
+<body>
+    <main class='container'>
+        <header>
+            <h1>Hangman Game</h1>
+            <h2>Guess the word :</h2>
+            <img id='hangedMan' src='assets/scripts/images/hanged.png' alt='hanged man tarot card'>
+
+            <p><span>Number of guess : </span><span id='mistakes'>0</span> / <span id='maxWrong'></span></p>
+
+        </header>
+
+
+        <p id='blanks'>The secret word goes here</p>
+
+        <!--Keyboard-->
+        <section id='keyboard'></section>
+
+    </main>
+    <!--Button resest-->
+    <button class='resetBtn' onClick="reset()">Play Again</button>
+
+    <!--Link JS with HTML-->
+    <script src='assets/scripts/script.js' type='text/javascript'></script>
 </body>
 
 </html>
