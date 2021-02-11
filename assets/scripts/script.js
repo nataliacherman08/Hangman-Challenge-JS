@@ -37,6 +37,7 @@ let maxWrong = 6;
 let mistakes = 0;
 let guessed = [];
 let wordStatus = null;
+let image = document.getElementById('hangedMan');
 
 
 //3) Pick a secretWord
@@ -72,8 +73,9 @@ function generateButtons() {
 
 //5) Function for changing picture everytime the user makes a mistake
 function updatePicture() {
-    document.getElementById('hangedMan').src = 'images/' + mistakes + '.png';
+    document.getElementById('hangedMan').src = 'assets/images/' + mistakes + '.png';
 }
+
 
 // ====The function of the Game========
 function handleGuess(chosenLetter) {
@@ -129,7 +131,7 @@ function reset() {
     guessedWord();
     updateMistakes();
     generateButtons();
-    document.getElementById('hangedMan').src = "images/hanged6.png";
+    document.getElementById('hangedMan').src = "assets/hanged.png";
 }
 
 
